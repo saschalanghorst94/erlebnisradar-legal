@@ -4,13 +4,21 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Impressum &amp; Datenschutz – ErlebnisRadar</title>
-<meta name="description" content="Impressum und Datenschutzerklärung der App ErlebnisRadar." />
+<meta name="description" content="Impressum und Datenschutzerklärung der App ErlebnisRadar für iPhone und Android." />
 <meta name="robots" content="index, follow" />
 <link rel="icon" href="data:,">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<!-- Schriften liegen selbst gehostet im Ordner fonts/ (SIL Open Font License),
+     damit beim Seitenaufruf keine Verbindung zu Google entsteht. -->
+<link rel="preload" href="fonts/inter.woff2" as="font" type="font/woff2" crossorigin>
 <style>
+  @font-face{
+    font-family:'Inter'; font-style:normal; font-weight:400 700; font-display:swap;
+    src:url(fonts/inter.woff2) format('woff2');
+  }
+  @font-face{
+    font-family:'Space Grotesk'; font-style:normal; font-weight:500 700; font-display:swap;
+    src:url(fonts/space-grotesk.woff2) format('woff2');
+  }
   :root{
     --indigo-950:#0d0b2e;
     --indigo-900:#151140;
@@ -93,15 +101,6 @@
     margin-top:-6px;
     margin-bottom:16px;
   }
-  .review{
-    background:rgba(79,70,229,0.18);
-    border:1px solid var(--indigo-400);
-    border-radius:10px;
-    padding:16px 20px;
-    font-size:14px;
-    color:var(--ink-dim);
-    margin-bottom:8px;
-  }
 
   footer{
     padding:34px 0 52px;
@@ -121,14 +120,15 @@
   <div class="kicker">ErlebnisRadar</div>
   <h1>Impressum &amp; Datenschutz</h1>
   <!-- 🔴 Bei jeder inhaltlichen Änderung dieses Datum aktualisieren. -->
-  <div class="updated">Stand: September 2026 · App-Version 1.10</div>
+  <div class="updated">Stand: Oktober 2026 · App-Version 1.10.22 · gilt für iPhone und Android</div>
 
   <nav class="toc">
     <ol>
       <li><a href="#impressum">Impressum</a></li>
       <li><a href="#haftung">Haftung für Inhalte und Links</a></li>
       <li><a href="#nutzerinhalte">Nutzerinhalte melden</a></li>
-      <li><a href="#datenschutz">Datenschutzerklärung</a></li>
+      <li><a href="#datenschutz">Datenschutzerklärung der App</a></li>
+      <li><a href="#website">Datenschutz auf dieser Website</a></li>
       <li><a href="#rechte">Deine Rechte</a></li>
     </ol>
   </nav>
@@ -145,7 +145,8 @@
     E-Mail: <a href="mailto:info@sasuware.de">info@sasuware.de</a>
   </address>
   <p>
-    Verantwortlich für den Inhalt: Sascha Langhorst, Anschrift wie oben.
+    Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV: Sascha Langhorst,
+    Anschrift wie oben.
   </p>
 </section>
 
@@ -154,11 +155,11 @@
   <p>
     Die in der App angezeigten Veranstaltungsangaben stammen überwiegend von
     Dritten: öffentlichen Veranstaltungsdatenbanken, Tourismusportalen,
-    Ticketanbietern sowie von Veranstaltern und Nutzern, die Events selbst
-    einreichen. Die Daten werden mit Sorgfalt geprüft, eine Gewähr für
-    Richtigkeit, Vollständigkeit und Aktualität kann jedoch nicht übernommen
-    werden. Bitte informiere dich vor dem Besuch einer Veranstaltung beim
-    jeweiligen Veranstalter.
+    Ticketanbietern sowie von Veranstaltern, die Events selbst einreichen. Die
+    Daten werden automatisch übernommen und mit Sorgfalt aufbereitet, eine
+    Gewähr für Richtigkeit, Vollständigkeit und Aktualität kann jedoch nicht
+    übernommen werden. Bitte informiere dich vor dem Besuch einer
+    Veranstaltung beim jeweiligen Veranstalter.
   </p>
   <p>
     Für Inhalte externer Webseiten, auf die verlinkt wird, sind ausschließlich
@@ -175,28 +176,36 @@
   <h2>Nutzerinhalte melden</h2>
   <p>
     Bewertungen, Kommentare und eingereichte Veranstaltungen stammen von
-    Nutzerinnen und Nutzern. Unpassende Inhalte lassen sich direkt in der App
-    melden: über das Flaggen-Symbol am jeweiligen Kommentar oder über
-    „Event melden“ auf der Detailseite. Alternativ genügt eine E-Mail an
-    <a href="mailto:info@sasuware.de">info@sasuware.de</a>. Gemeldete Inhalte
-    werden zeitnah geprüft und bei Verstößen entfernt.
+    Nutzerinnen und Nutzern bzw. Veranstaltern. Unpassende Inhalte lassen sich
+    direkt in der App melden: über das Flaggen-Symbol am jeweiligen Kommentar
+    oder über „Event melden“ auf der Detailseite. Alternativ genügt eine
+    E-Mail an <a href="mailto:info@sasuware.de">info@sasuware.de</a>. Gemeldete
+    Inhalte werden zeitnah geprüft und bei Verstößen entfernt.
   </p>
 </section>
 
-<!-- ══════════════════ DATENSCHUTZ ══════════════════ -->
+<!-- ══════════════════ DATENSCHUTZ APP ══════════════════ -->
 <section id="datenschutz">
-  <h2>Datenschutzerklärung</h2>
+  <h2>Datenschutzerklärung der App</h2>
 
   <h3>Überblick</h3>
   <p>
-    ErlebnisRadar zeigt Veranstaltungen in deiner Region. Die App lässt sich
-    <strong>ohne Registrierung und ohne Nutzerkonto</strong> verwenden. Standort
-    und Benachrichtigungen sind freiwillig. Es gibt <strong>keine Werbung und
-    kein Tracking zu Werbezwecken</strong>.
+    ErlebnisRadar zeigt Veranstaltungen in deiner Region, für iPhone und
+    Android. Die App lässt sich <strong>ohne Registrierung und ohne
+    Nutzerkonto</strong> verwenden. Standort und Benachrichtigungen sind
+    freiwillig. Es gibt <strong>keine Werbung, keine Analyse deines
+    Nutzungsverhaltens und kein Tracking</strong>.
   </p>
 
   <h3>Verantwortlicher</h3>
   <p>Sascha Langhorst, Kurze Straße 4, 32369 Rahden, <a href="mailto:info@sasuware.de">info@sasuware.de</a></p>
+
+  <h3>Download der App</h3>
+  <p>
+    Die App wird über den App Store von Apple bzw. Google Play bereitgestellt.
+    Für den Download und die dort angezeigten Statistiken sind Apple bzw.
+    Google verantwortlich; es gelten deren Datenschutzbestimmungen.
+  </p>
 
   <h3>Bereitstellung der App</h3>
   <p>
@@ -207,17 +216,31 @@
   </p>
   <span class="legal-basis">Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO (funktionsfähiger Betrieb der App)</span>
 
+  <h3>Anonyme Anmeldung</h3>
+  <p>
+    Beim Start meldet sich die App im Hintergrund <strong>anonym</strong> bei
+    Firebase Authentication an. Dabei entsteht eine zufällige Nutzer-ID, ohne
+    Name, E-Mail-Adresse oder Passwort. Sie dient allein dazu, dass eine
+    Bewertung nur von dem Gerät geändert werden kann, das sie abgegeben hat,
+    und schützt so vor Manipulation.
+  </p>
+  <span class="legal-basis">Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO (Schutz vor Missbrauch der Bewertungsfunktion)</span>
+
   <h3>Standort (freiwillig)</h3>
   <p>
     Wenn du den Standortzugriff erlaubst, nutzt die App deinen Standort, um
     Events in deiner Nähe anzuzeigen und Entfernungen zu berechnen. Die
-    Auswertung erfolgt auf deinem Gerät. Für die Wetteranzeige werden die
-    Koordinaten an <strong>Open-Meteo</strong> (open-meteo.com) übermittelt.
-    Ortsnamen, die du im Filter auswählst, werden zur Bestimmung der
-    Koordinaten an den Geocoding-Dienst deines Betriebssystems (Apple bzw.
-    Google) übermittelt.
+    Auswertung erfolgt auf deinem Gerät. Um den nächstgelegenen Ort zu
+    bestimmen, werden die Koordinaten an den Geocoding-Dienst deines
+    Betriebssystems übermittelt (Apple bzw. Google). Ortsnamen, die du im
+    Filter auswählst, werden auf demselben Weg in Koordinaten umgerechnet.
   </p>
-  <span class="legal-basis">Rechtsgrundlage: Art. 6 Abs. 1 lit. a DSGVO (Einwilligung über den Systemdialog, jederzeit in den Geräteeinstellungen widerrufbar)</span>
+  <p>
+    Für die Wetteranzeige werden die Koordinaten des gewählten Ortes bzw.
+    deines Standorts an <strong>Open-Meteo</strong> (open-meteo.com, Schweiz)
+    übermittelt.
+  </p>
+  <span class="legal-basis">Rechtsgrundlage: Art. 6 Abs. 1 lit. a DSGVO (Einwilligung über den Systemdialog, jederzeit in den Geräteeinstellungen widerrufbar); für gewählte Orte Art. 6 Abs. 1 lit. f DSGVO</span>
 
   <h3>Karte</h3>
   <p>
@@ -230,29 +253,37 @@
 
   <h3>Benachrichtigungen (freiwillig)</h3>
   <p>
-    Wenn du Push-Benachrichtigungen erlaubst, erzeugt Firebase Cloud Messaging
-    ein Push-Token für dein Gerät. Für Wochenübersichten und Hinweise zu
-    Favoriten abonniert die App „Themen“, die sich aus deinen gewählten Orten,
-    Kategorien und favorisierten Events ergeben.
+    Wenn du Mitteilungen erlaubst, erzeugt Firebase Cloud Messaging ein
+    Push-Token für dein Gerät; auf dem iPhone erfolgt die Zustellung zusätzlich
+    über den Apple Push Notification Service. Für die wöchentlichen
+    Empfehlungen und die Erinnerung an Favoriten abonniert die App „Themen“,
+    die sich aus deinen gewählten Orten, Kategorien und favorisierten Events
+    ergeben, sowie ein allgemeines Thema für Hinweise an alle. Die Themen
+    werden bei Google verarbeitet, nicht in einer eigenen Datenbank.
   </p>
-  <span class="legal-basis">Rechtsgrundlage: Art. 6 Abs. 1 lit. a DSGVO (Einwilligung, widerrufbar in den Geräteeinstellungen oder im Profil der App)</span>
-
-  <h3>Fehlerberichte</h3>
   <p>
-    Bei Abstürzen übermittelt Firebase Crashlytics einen technischen Bericht:
-    Gerätetyp, Betriebssystem, App-Version, Fehlerzustand und eine zufällig
-    erzeugte Installations-ID. Diese Übermittlung lässt sich im Profil der App
-    unter „Fehlerberichte“ abschalten.
+    Abschalten kannst du die Mitteilungen in den Geräteeinstellungen oder in
+    der App unter Einstellungen → Benachrichtigungen.
+  </p>
+  <span class="legal-basis">Rechtsgrundlage: Art. 6 Abs. 1 lit. a DSGVO (Einwilligung, jederzeit widerrufbar)</span>
+
+  <h3>Absturzberichte</h3>
+  <p>
+    Bei Abstürzen und Fehlern übermittelt Firebase Crashlytics einen
+    technischen Bericht: Gerätetyp, Betriebssystem, App-Version, Fehlerzustand
+    und eine zufällig erzeugte Installations-ID. Die Berichte dienen nur der
+    Fehlerbehebung. Die Übermittlung ist voreingestellt und lässt sich in der
+    App unter Einstellungen → „Absturzberichte &amp; Diagnosedaten“ abschalten.
   </p>
   <span class="legal-basis">Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO (Stabilität und Fehlerbehebung)</span>
 
   <h3>Bewertungen und Kommentare</h3>
   <p>
     Wenn du ein Event bewertest, werden die Sterne-Anzahl, dein optionaler
-    Kommentar, der Zeitpunkt und eine <strong>zufällig erzeugte, anonyme
-    Geräte-Kennung</strong> gespeichert. Die Kennung stellt sicher, dass pro
-    Gerät nur eine Bewertung je Event möglich ist; sie erlaubt keine
-    Identifikation deiner Person.
+    Kommentar, der Zeitpunkt und die oben genannte <strong>anonyme
+    Nutzer-ID</strong> gespeichert. Die ID stellt sicher, dass pro Gerät nur
+    eine Bewertung je Event möglich ist; sie erlaubt keine Identifikation
+    deiner Person.
   </p>
   <p>
     <strong>Kommentare sind für alle Nutzerinnen und Nutzer sichtbar.</strong>
@@ -264,8 +295,8 @@
   <p>
     Reichst du ein Event ein, werden deine Angaben zur Veranstaltung
     gespeichert (Name, Ort, Zeit, Beschreibung, Links) sowie ein optionales
-    Bild. Nach Prüfung werden diese Veranstaltungsangaben in der App
-    veröffentlicht.
+    Bild. Die App greift dabei nur auf das Foto zu, das du selbst auswählst.
+    Nach Prüfung werden die Veranstaltungsangaben in der App veröffentlicht.
   </p>
   <p>
     <strong>Optionale Kontaktdaten</strong> (Name, E-Mail, Telefon) sind nur für
@@ -277,59 +308,72 @@
 
   <h3>Meldungen</h3>
   <p>
-    Meldest du ein Event oder einen Kommentar, werden der gewählte Grund, dein
-    optionaler Hinweistext und der Zeitpunkt gespeichert. Ein Name oder Konto
-    wird dabei nicht erfasst.
+    Meldest du ein Event oder einen Kommentar, werden das betroffene Event,
+    der gewählte Grund, dein optionaler Hinweistext und der Zeitpunkt
+    gespeichert, bei Kommentaren zusätzlich ein Auszug des gemeldeten
+    Kommentars. Ein Name oder Konto wird dabei nicht erfasst.
   </p>
   <span class="legal-basis">Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO (Qualitätssicherung, Schutz vor rechtswidrigen Inhalten)</span>
 
-  <h3>Lokal gespeicherte Einstellungen</h3>
+  <h3>Lokal gespeicherte Daten</h3>
   <p>
-    Favoriten, Filter, Design-Einstellung, Onboarding-Status und die oben
-    genannte Geräte-Kennung werden lokal auf deinem Gerät gespeichert und beim
-    Löschen der App entfernt.
+    Favoriten, Filter (Orte, Umkreis, Kategorien), Design-Einstellung,
+    Mitteilungs- und Datenschutz-Einstellungen sowie der Onboarding-Status
+    werden nur auf deinem Gerät gespeichert und beim Löschen der App entfernt.
+    Über Einstellungen → „App-Daten zurücksetzen“ lassen sie sich auch direkt
+    löschen. Die Schüttel-Funktion wertet den Bewegungssensor ausschließlich
+    auf dem Gerät aus.
   </p>
 
   <h3>Schriftarten</h3>
   <p>
-    Die App lädt die Schriftart „Inter“ beim ersten Start von Google Fonts.
-    Dabei wird deine IP-Adresse an Google übertragen.
+    Die verwendete Schriftart ist fest in die App eingebunden. Zum Anzeigen von
+    Texten wird keine Verbindung zu einem Schriftarten-Dienst aufgebaut.
   </p>
 
   <h3>Externe Links</h3>
   <p>
-    Links zu Veranstaltern, Ticketanbietern, Karten- oder Social-Media-Diensten
-    öffnen externe Seiten beziehungsweise Apps. Dort gelten die
-    Datenschutzbestimmungen der jeweiligen Anbieter.
+    Links zu Veranstaltern, Ticketanbietern, Routenplanung (Google Maps),
+    E-Mail, Social-Media-Diensten oder zur Unterstützung des Projekts (PayPal)
+    öffnen externe Seiten beziehungsweise Apps. Erst dann werden Daten an den
+    jeweiligen Anbieter übertragen; es gelten dessen
+    Datenschutzbestimmungen.
   </p>
 
   <h3>Herkunft der Veranstaltungsdaten</h3>
   <p>
     Die angezeigten Events stammen aus öffentlichen Veranstaltungsquellen
-    (unter anderem Tourismusportale und Ticketanbieter) sowie aus
-    Einreichungen. Personenbezogene Daten der Nutzerinnen und Nutzer werden
-    dorthin nicht übermittelt.
+    (unter anderem Tourismusportale, kommunale Veranstaltungskalender und
+    Ticketanbieter) sowie aus Einreichungen. Personenbezogene Daten der
+    Nutzerinnen und Nutzer werden dorthin nicht übermittelt.
   </p>
 
   <h3>Empfänger und Übermittlung in Drittländer</h3>
   <p>
     Empfänger sind Dienstleister, die zur Bereitstellung der App eingesetzt
-    werden: Google Ireland Ltd. / Google LLC (Firebase, Google Maps, Google
-    Fonts), Open-Meteo sowie Apple und Google für Push-Zustellung, App-Store
-    und Geocoding. Bei Google kann eine Übermittlung in die USA erfolgen; diese
-    stützt sich auf den Angemessenheitsbeschluss zum EU-U.S. Data Privacy
-    Framework beziehungsweise auf Standardvertragsklauseln.
+    werden:
+  </p>
+  <ul>
+    <li>Google Ireland Ltd. / Google LLC: Firebase (Firestore, Storage, Cloud Functions, Authentication, Cloud Messaging, Crashlytics), Google Maps, Geocoding unter Android, Google Play</li>
+    <li>Apple Distribution International Ltd. / Apple Inc.: App Store, Push-Zustellung und Geocoding auf dem iPhone</li>
+    <li>Open-Meteo (Schweiz): Wetterdaten</li>
+  </ul>
+  <p>
+    Die Daten der App werden in Rechenzentren in der EU gespeichert und
+    verarbeitet. Bei Google und Apple kann eine Übermittlung in die USA
+    erfolgen; diese stützt sich auf den Angemessenheitsbeschluss zum EU-U.S.
+    Data Privacy Framework beziehungsweise auf Standardvertragsklauseln. Für
+    die Schweiz besteht ein Angemessenheitsbeschluss der EU-Kommission.
   </p>
 
   <h3>Speicherdauer</h3>
-  <p>
-    Veranstaltungsdaten werden gespeichert, solange die Veranstaltung angezeigt
-    wird; vergangene Events werden automatisch gelöscht. Kontaktdaten aus
-    Einreichungen werden nach Abschluss der Rückfragen gelöscht, spätestens
-    sechs Monate nach dem Veranstaltungstermin. Bewertungen und Meldungen
-    werden gelöscht, sobald sie für den genannten Zweck nicht mehr erforderlich
-    sind.
-  </p>
+  <ul>
+    <li><strong>Veranstaltungen</strong> werden einen Monat nach ihrem Termin automatisch gelöscht, zusammen mit den Bewertungen und Kommentaren dazu.</li>
+    <li><strong>Kontaktdaten aus Einreichungen</strong> werden zusammen mit dem Event gelöscht, also spätestens einen Monat nach dem Veranstaltungstermin; bei abgelehnten Einreichungen sofort mit der Ablehnung.</li>
+    <li><strong>Meldungen</strong> werden gelöscht, sobald sie bearbeitet sind und nicht mehr benötigt werden.</li>
+    <li><strong>Absturzberichte</strong> speichert Firebase Crashlytics 90 Tage.</li>
+    <li><strong>Die anonyme Nutzer-ID</strong> wird gespeichert, solange sie zur Absicherung von Bewertungen benötigt wird. Auf Wunsch löschen wir sie (siehe „Deine Rechte“).</li>
+  </ul>
 
   <h3>Keine automatisierte Entscheidungsfindung</h3>
   <p>
@@ -339,25 +383,51 @@
   </p>
 </section>
 
+<!-- ══════════════════ DATENSCHUTZ WEBSITE ══════════════════ -->
+<section id="website">
+  <h2>Datenschutz auf dieser Website</h2>
+  <!-- 🔴 Prüfen: Liegt auch die Projektseite (Landingpage) bei GitHub Pages?
+       Falls sie woanders gehostet wird, diesen Anbieter hier ergänzen. -->
+  <p>
+    Diese Website wird über <strong>GitHub Pages</strong> (GitHub Inc., USA)
+    bereitgestellt. Beim Aufruf verarbeitet GitHub technisch notwendige
+    Verbindungsdaten wie IP-Adresse, Zeitpunkt und aufgerufene Seite, um die
+    Seite auszuliefern und vor Angriffen zu schützen. Die Übermittlung in die
+    USA stützt sich auf das EU-U.S. Data Privacy Framework.
+  </p>
+  <p>
+    Die Website setzt <strong>keine Cookies</strong>, nutzt <strong>keine
+    Analyse- oder Tracking-Dienste</strong> und lädt Schriftarten von ihrem
+    eigenen Server, nicht von Google.
+  </p>
+  <span class="legal-basis">Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO (sichere und zuverlässige Bereitstellung der Website)</span>
+</section>
+
 <section id="rechte">
   <h2>Deine Rechte</h2>
   <p>
     Dir stehen die Rechte auf Auskunft (Art. 15 DSGVO), Berichtigung
-    (Art. 16), Löschung (Art. 17), Einschränkung der Verarbeitung (Art. 18),
-    Datenübertragbarkeit (Art. 20) und Widerspruch (Art. 21) zu. Erteilte
-    Einwilligungen kannst du jederzeit mit Wirkung für die Zukunft widerrufen.
+    (Art. 16), Löschung (Art. 17), Einschränkung der Verarbeitung (Art. 18)
+    und Datenübertragbarkeit (Art. 20) zu. Erteilte Einwilligungen kannst du
+    jederzeit mit Wirkung für die Zukunft widerrufen.
+  </p>
+  <p>
+    <strong>Widerspruchsrecht (Art. 21 DSGVO):</strong> Verarbeitungen auf
+    Grundlage von Art. 6 Abs. 1 lit. f DSGVO kannst du aus Gründen, die sich
+    aus deiner besonderen Situation ergeben, jederzeit widersprechen. Für
+    Absturzberichte genügt dafür der Schalter in den Einstellungen der App.
   </p>
   <p>
     Da keine Nutzerkonten geführt werden, ist eine Zuordnung deiner Daten nur
-    möglich, wenn du die betreffende Geräte-Kennung oder den Inhalt deiner
-    Einreichung beziehungsweise Meldung angibst. Wende dich dafür an
+    möglich, wenn du den Inhalt deiner Bewertung, Einreichung oder Meldung
+    angibst. Wende dich dafür an
     <a href="mailto:info@sasuware.de">info@sasuware.de</a>.
   </p>
 
   <h3>Beschwerderecht</h3>
   <p>
     Du hast das Recht, dich bei einer Datenschutz-Aufsichtsbehörde zu
-    beschweren. Zuständig ist:
+    beschweren (Art. 77 DSGVO). Zuständig ist:
   </p>
   <address>
     Landesbeauftragte für Datenschutz und Informationsfreiheit<br>
@@ -370,12 +440,12 @@
   <p>
     Diese Erklärung wird angepasst, wenn sich die App oder die Rechtslage
     ändert. Die jeweils aktuelle Fassung ist in der App unter
-    Profil → Impressum &amp; Datenschutz verlinkt.
+    Einstellungen → Impressum &amp; Datenschutz verlinkt.
   </p>
 </section>
 
 <footer>
-  <div>© 2026 ErlebnisRadar</div>
+  <div>© 2026 ErlebnisRadar · Kein Tracking auf dieser Seite</div>
   <div>
     <a href="mailto:info@sasuware.de">Kontakt</a>
   </div>
