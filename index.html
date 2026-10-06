@@ -193,8 +193,9 @@
     ErlebnisRadar zeigt Veranstaltungen in deiner Region, für iPhone und
     Android. Die App lässt sich <strong>ohne Registrierung und ohne
     Nutzerkonto</strong> verwenden. Standort und Benachrichtigungen sind
-    freiwillig. Es gibt <strong>keine Werbung, keine Analyse deines
-    Nutzungsverhaltens und kein Tracking</strong>.
+    freiwillig. Es gibt <strong>keine Werbung, kein Nutzerprofil und kein
+    Tracking</strong>. Wir erheben lediglich anonyme Gesamtzahlen zur
+    Reichweite (siehe „Reichweite“).
   </p>
 
   <h3>Verantwortlicher</h3>
@@ -220,11 +221,29 @@
   <p>
     Beim Start meldet sich die App im Hintergrund <strong>anonym</strong> bei
     Firebase Authentication an. Dabei entsteht eine zufällige Nutzer-ID, ohne
-    Name, E-Mail-Adresse oder Passwort. Sie dient allein dazu, dass eine
+    Name, E-Mail-Adresse oder Passwort. Sie dient dazu, dass eine
     Bewertung nur von dem Gerät geändert werden kann, das sie abgegeben hat,
     und schützt so vor Manipulation.
   </p>
   <span class="legal-basis">Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO (Schutz vor Missbrauch der Bewertungsfunktion)</span>
+
+  <h3>Reichweite (anonyme Zählung)</h3>
+  <p>
+    Einmal täglich zählen wir, wie viele anonyme Nutzer-IDs es gibt, wie
+    viele neu hinzugekommen sind und wie viele in den letzten 1, 7 und 30
+    Tagen aktiv waren. Grundlage ist allein der Zeitpunkt der letzten
+    Anmeldung, den Firebase Authentication ohnehin speichert. Gespeichert
+    werden nur diese Gesamtzahlen, keine Angaben zu einzelnen Geräten.
+  </p>
+  <p>
+    Öffnest du die Detailseite eines Events, zählt die App einen Zähler für
+    dieses Event und den laufenden Monat um eins hoch. Dabei wird nur die
+    Zahl gespeichert, keine Nutzer-ID und keine Gerätekennung. Wir nutzen
+    beides, um zu sehen, wie viele Menschen die App nutzt und welche Events
+    gefragt sind, und um Veranstaltern Aufrufzahlen zu ihren Events nennen
+    zu können.
+  </p>
+  <span class="legal-basis">Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO (Weiterentwicklung der App und Nachweis der Reichweite)</span>
 
   <h3>Standort (freiwillig)</h3>
   <p>
@@ -381,6 +400,7 @@
     <li><strong>Meldungen</strong> werden gelöscht, sobald sie bearbeitet sind und nicht mehr benötigt werden.</li>
     <li><strong>Absturzberichte</strong> speichert Firebase Crashlytics 90 Tage.</li>
     <li><strong>Die anonyme Nutzer-ID</strong> wird gespeichert, solange sie zur Absicherung von Bewertungen benötigt wird. Auf Wunsch löschen wir sie (siehe „Deine Rechte“).</li>
+    <li><strong>Nutzerzahlen und Aufrufzähler</strong> enthalten keine personenbezogenen Daten und werden als Statistik aufbewahrt.</li>
   </ul>
 
   <h3>Keine automatisierte Entscheidungsfindung</h3>
