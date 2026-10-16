@@ -120,7 +120,7 @@
   <div class="kicker">ErlebnisRadar</div>
   <h1>Impressum &amp; Datenschutz</h1>
   <!-- 🔴 Bei jeder inhaltlichen Änderung dieses Datum anpassen. -->
-  <div class="updated">Stand: Oktober 2026 · App-Version 1.10.22 · gilt für iPhone und Android</div>
+  <div class="updated">Stand: 16. Oktober 2026 · gilt für iPhone und Android</div>
 
   <nav class="toc">
     <ol>
@@ -194,8 +194,9 @@
     Android. Die App lässt sich <strong>ohne Registrierung und ohne
     Nutzerkonto</strong> verwenden. Standort und Benachrichtigungen sind
     freiwillig. Es gibt <strong>keine Werbung, kein Nutzerprofil und kein
-    Tracking</strong>. Wir erheben lediglich anonyme Gesamtzahlen zur
-    Reichweite (siehe „Reichweite“).
+    Tracking</strong>. Erhoben werden anonyme Gesamtzahlen zur Reichweite
+    (siehe „Reichweite“) und – nur mit deiner Einwilligung – eine
+    Nutzungsanalyse (siehe „Nutzungsanalyse“).
   </p>
 
   <h3>Verantwortlicher</h3>
@@ -236,12 +237,15 @@
     werden nur diese Gesamtzahlen, keine Angaben zu einzelnen Geräten.
   </p>
   <p>
-    Öffnest du die Detailseite eines Events, zählt die App einen Zähler für
-    dieses Event und den laufenden Monat um eins hoch. Dabei wird nur die
-    Zahl gespeichert, keine Nutzer-ID und keine Gerätekennung. Wir nutzen
-    beides, um zu sehen, wie viele Menschen die App nutzt und welche Events
-    gefragt sind, und um Veranstaltern Aufrufzahlen zu ihren Events nennen
-    zu können.
+    Öffnest du die Detailseite eines Events, merkst du es als Favorit oder
+    tippst du auf den Link zur Website bzw. zu den Tickets, zählt die App
+    einen Zähler für dieses Event und den jeweiligen Tag um eins hoch
+    (bis Version 2.0.4: nur Aufrufe, je Monat). Gespeichert werden nur die
+    Event-ID, das Datum und die Zahl – keine Nutzer-ID, keine Gerätekennung,
+    kein Standort. Auf deinem Gerät wird dafür nichts gespeichert oder
+    ausgelesen. Beides dient dazu, zu sehen, wie viele Menschen die App
+    nutzen und welche Events gefragt sind, und Veranstaltern Zahlen zu ihren
+    Events nennen zu können.
   </p>
   <span class="legal-basis">Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO (Weiterentwicklung der App und Nachweis der Reichweite)</span>
 
@@ -296,6 +300,45 @@
     App unter Einstellungen → „Absturzberichte &amp; Diagnosedaten“ abschalten.
   </p>
   <span class="legal-basis">Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO (Stabilität und Fehlerbehebung)</span>
+
+  <h3 id="nutzungsanalyse">Nutzungsanalyse (freiwillig, ab Version 2.0.5)</h3>
+  <p>
+    Nur wenn du zustimmst, erfasst die App mit <strong>Google Firebase
+    Analytics</strong>, wie sie genutzt wird. Gefragt wird beim ersten Start
+    bzw. einmal nach dem Update; ändern lässt sich die Entscheidung jederzeit
+    unter Einstellungen → „Nutzung auswerten“. Ohne Zustimmung ist die
+    Erfassung abgeschaltet, und die App funktioniert vollständig.
+  </p>
+  <p>Erfasst werden:</p>
+  <ul>
+    <li>aufgerufene Bereiche der App (Entdecken, Karte, Kalender, Favoriten),</li>
+    <li>Aktionen: Event angesehen, als Favorit gemerkt, geteilt, Website- oder
+      Ticket-Link angetippt (jeweils mit Event-ID, Kategorie und Datenquelle),
+      Kategorien gefiltert, Ort aus der Ortsauswahl gewählt (nur der Ortsname),
+      Suche (nur Länge des Suchbegriffs und Zahl der Treffer, nie der
+      Suchtext), Event eingereicht (nur die Kategorie), Bewertung abgegeben
+      (nur die Sternzahl), „Unterstützen“ angetippt, Zufalls-Event per Schütteln,</li>
+    <li>technische Angaben: eine zufällige App-Instanz-ID, Gerätemodell,
+      Betriebssystem, App-Version, Sprache, Zeitpunkt und Dauer der Nutzung
+      sowie ein ungefährer Ort auf Ebene von Land bzw. Region, den Google aus
+      der IP-Adresse ableitet (die IP-Adresse selbst speichert Firebase
+      Analytics nicht).</li>
+  </ul>
+  <p>
+    <strong>Nicht erfasst</strong> werden die Werbe-ID (IDFA bzw.
+    Android-Werbe-ID), dein GPS-Standort, Suchtexte, Kommentare und
+    Kontaktdaten. Die Daten werden nicht für Werbung genutzt und nicht mit
+    anderen Diensten verknüpft; Google-Signale und die Datenfreigabe an
+    Google sind ausgeschaltet. Ausgewertet werden nur zusammengefasste Zahlen,
+    um die App zu verbessern und Veranstaltern Reichweite nachzuweisen.
+  </p>
+  <p>
+    Ein Widerruf wirkt für die Zukunft und löscht die App-Instanz-ID auf
+    deinem Gerät. Speicherdauer: 2 Monate in Firebase Analytics; zusätzlich
+    werden die Rohdaten in ein Google-BigQuery-Projekt mit Speicherort EU
+    exportiert und dort nach 14 Monaten gelöscht.
+  </p>
+  <span class="legal-basis">Rechtsgrundlage: Art. 6 Abs. 1 lit. a DSGVO und § 25 Abs. 1 TDDDG (Einwilligung, jederzeit widerrufbar)</span>
 
   <h3>Bewertungen und Kommentare</h3>
   <p>
@@ -382,7 +425,7 @@
     werden:
   </p>
   <ul>
-    <li>Google Ireland Ltd. / Google LLC: Firebase (Firestore, Storage, Cloud Functions, Authentication, Cloud Messaging, Crashlytics), Google Maps, Geocoding unter Android, Google Play</li>
+    <li>Google Ireland Ltd. / Google LLC: Firebase (Firestore, Storage, Cloud Functions, Authentication, Cloud Messaging, Crashlytics, Analytics – nur mit Einwilligung), Google BigQuery (Auswertung, Speicherort EU), Google Maps, Geocoding unter Android, Google Play</li>
     <li>Apple Distribution International Ltd. / Apple Inc.: App Store, Push-Zustellung und Geocoding auf dem iPhone</li>
     <li>Bright Sky (brightsky.dev): Wetterdaten des Deutschen Wetterdienstes</li>
   </ul>
@@ -400,6 +443,7 @@
     <li><strong>Kontaktdaten und Bilder aus Einreichungen</strong> werden zusammen mit dem Event gelöscht, also spätestens einen Monat nach dem Veranstaltungstermin; bei abgelehnten Einreichungen sofort mit der Ablehnung.</li>
     <li><strong>Meldungen</strong> werden gelöscht, sobald sie bearbeitet sind und nicht mehr benötigt werden.</li>
     <li><strong>Absturzberichte</strong> speichert Firebase Crashlytics 90 Tage.</li>
+    <li><strong>Nutzungsanalyse</strong> (nur mit Einwilligung): 2 Monate in Firebase Analytics, 14 Monate im Export (Google BigQuery, Speicherort EU).</li>
     <li><strong>Die anonyme Nutzer-ID</strong> wird gespeichert, solange sie zur Absicherung von Bewertungen benötigt wird. Auf Wunsch löschen wir sie (siehe „Deine Rechte“).</li>
     <li><strong>Nutzerzahlen und Aufrufzähler</strong> enthalten keine personenbezogenen Daten und werden als Statistik aufbewahrt.</li>
   </ul>
@@ -427,10 +471,23 @@
   </p>
   <p>
     Die Website setzt <strong>keine Cookies</strong>, nutzt <strong>keine
-    Analyse- oder Tracking-Dienste</strong> und lädt Schriftarten von ihrem
-    eigenen Server, nicht von Google.
+    Analyse- oder Tracking-Dienste Dritter</strong> und lädt Schriftarten von
+    ihrem eigenen Server, nicht von Google.
   </p>
   <span class="legal-basis">Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO (sichere und zuverlässige Bereitstellung der Website)</span>
+
+  <h3>Besuchszählung ohne Cookies</h3>
+  <p>
+    Die Projektseite erlebnisradar.sasuware.de zählt, wie oft ihre Seiten
+    aufgerufen und bestimmte Links (App Store, Event einreichen, Instagram)
+    angetippt werden. Dafür sendet die Seite nur den Pfad der Seite bzw. den
+    Namen des Links an einen Server von Google Cloud in Frankfurt (Firebase
+    Cloud Functions, Google Ireland Ltd.). Gespeichert wird je Tag nur die
+    Anzahl – keine IP-Adresse, keine Kennung, kein Cookie, nichts in deinem
+    Browser. Die IP-Adresse wird technisch für die Übertragung verarbeitet,
+    aber nicht gespeichert.
+  </p>
+  <span class="legal-basis">Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO (Besucherzahlen der Projektseite); da auf deinem Gerät nichts gespeichert oder ausgelesen wird, ist keine Einwilligung nötig</span>
 </section>
 
 <section id="rechte">
@@ -445,7 +502,9 @@
     <strong>Widerspruchsrecht (Art. 21 DSGVO):</strong> Verarbeitungen auf
     Grundlage von Art. 6 Abs. 1 lit. f DSGVO kannst du aus Gründen, die sich
     aus deiner besonderen Situation ergeben, jederzeit widersprechen. Für
-    Absturzberichte genügt dafür der Schalter in den Einstellungen der App.
+    Absturzberichte genügt dafür der Schalter in den Einstellungen der App;
+    die Einwilligung in die Nutzungsanalyse widerrufst du über den Schalter
+    „Nutzung auswerten“.
   </p>
   <p>
     Da keine Nutzerkonten geführt werden, ist eine Zuordnung deiner Daten nur
