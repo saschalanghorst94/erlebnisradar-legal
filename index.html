@@ -232,10 +232,12 @@
   <h3>Reichweite (anonyme Zählung)</h3>
   <p>
     Einmal täglich zählen wir, wie viele anonyme Nutzer-IDs es gibt, wie
-    viele neu hinzugekommen sind und wie viele in den letzten 1, 7 und 30
-    Tagen aktiv waren. Grundlage ist allein der Zeitpunkt der letzten
-    Anmeldung, den Firebase Authentication ohnehin speichert. Gespeichert
-    werden nur diese Gesamtzahlen, keine Angaben zu einzelnen Geräten.
+    viele neu hinzugekommen sind, wie viele in den letzten 1, 7 und 30
+    Tagen aktiv waren und wie viele an einem späteren Tag als dem ersten
+    wiederkamen (je Tag der ersten Nutzung zusammengefasst). Grundlage sind
+    allein der Zeitpunkt der ersten und der letzten Anmeldung, die Firebase
+    Authentication ohnehin speichert. Gespeichert werden nur diese
+    Gesamtzahlen, keine Angaben zu einzelnen Geräten.
   </p>
   <p>
     Öffnest du die Detailseite eines Events, merkst du es als Favorit oder
